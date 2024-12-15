@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+        <!-- SEO Meta Tags -->
+        <meta name="description" content="FrDomains is a service that offers free subdomains" />
+        <meta name="author" content="MrTomiCZ, kubali" />
+        <meta name="application-name" content="FrDomains">
+
+        <!-- OG Meta Tags to improve the way the post looks when you share the page on Facebook, Twitter, LinkedIn -->
+        <meta property="og:site_name" content="FrDomains" /> <!-- website name -->
+        <meta property="og:site" content="frdomains.site" /> <!-- website link -->
+        <meta property="og:title" content="FrDomains" /> <!-- title shown in the actual shared post -->
+        <meta property="og:description" content="FrDomains is a service that offers free subdomains &amp; free email addresses" /> <!-- description shown in the actual shared post -->
+        <meta property="og:image" content="/logo.jpg" /> <!-- image link, make sure it's jpg -->
+        <meta property="og:url" content="" /> <!-- where do you want your post to link to -->
+        <meta name="twitter:card" content="summary_large_image" /> <!-- to have large image post format in Twitter -->
+
+        <!-- Webpage Title -->
+        <title>FrDomains</title>
+
+        <!-- Styles -->
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet" />
+        <link href="css/fontawesome-all.css" rel="stylesheet" />
+        <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet" />
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link href="css/swiper.css" rel="stylesheet" />
+        <link href="css/magnific-popup.css" rel="stylesheet" />
+        <link href="css/dark/styles.css" rel="stylesheet" />
+        <script src="https://unpkg.com/typeit@8.7.1/dist/index.umd.js"></script>
+
+        <!-- Favicon  -->
+        <link rel="icon" href="/favicon.webp" />
+
+    </head>
+    <body data-spy="scroll" data-target=".fixed-top" class="bg-zinc-700">
+
+        <!-- Dark Mode (does not work thats why its !--'d) -->
+        <!-- meta name="color-scheme" content="light dark" -->
+
+        <!-- Navigation -->
+        <nav class="navbar fixed-top">
+            <div class="container sm:px-4 lg:px-8 flex flex-wrap items-center justify-between lg:flex-nowrap">
+                
+                <!-- Text Logo - Use this if you don't have a graphic logo -->
+                <!-- <a class="text-gray-800 font-semibold text-3xl leading-4 no-underline page-scroll" href="index.html">Pavo</a> -->
+
+                <!-- Image Logo -->
+                <a class="inline-block mr-4 py-0.5 text-xl whitespace-nowrap hover:no-underline focus:no-underline" href="index.html">
+                    <img src="/favicontp.png" alt="alternative" class="h-15" width="40" height="40"/>
+                </a>
+                <a class="text-white-800 font-semibold text-1xl leading-4 no-underline page-scroll" href="index.html">(features may change)</a>
+
+                <button class="background-transparent rounded text-xl leading-none hover:no-underline focus:no-underline lg:hidden lg:text-gray-400" type="button" data-toggle="offcanvas">
+                    <span class="navbar-toggler-icon inline-block w-8 h-8 align-middle"></span>
+                </button>
+
+                <div class="navbar-collapse offcanvas-collapse lg:flex lg:flex-grow lg:items-center" id="navbarsExampleDefault">
+                    <ul class="pl-0 mt-3 mb-2 ml-auto flex flex-col list-none lg:mt-0 lg:mb-0 lg:flex-row">
+
+                        <li>
+                            <a class="nav-link page-scroll active" href="/#header">Home <span class="sr-only"></span></a>
+                        </li>
+                        <li>
+                            <a class="nav-link page-scroll" href="/#pricing">Pricing</a>
+                        </li>
+                        <li>
+                            <a class="nav-link page-scroll" href="/#contact">Contact</a>
+                        </li>
+                        <li>
+                            <a class="nav-link page-scroll" href="/#statistics">Stats</a>
+                        </li>
+                        <li class="dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Drop&nbsp;</a>
+                        <div class="dropdown-menu" aria-labelledby="dropdown01">
+                            <a class="nav-link page-scroll dropdown-item" href="/team">Team</a>
+                        <div class="dropdown-divider"></div>
+                            <a class="nav-link page-scroll dropdown-item" href="/tutorials">Tutorials</a>
+                        <div class="dropdown-divider"></div>
+                            <a class="nav-link page-scroll dropdown-item" href="/privacy">Privacy Policy</a>
+                        <!-- div class="dropdown-divider"></div -->
+                            <!-- a class="nav-link page-scroll dropdown-item" href="/whatis">WhatIs (ALPHA)</a -->
+                        <!-- div class="dropdown-divider"></div-->
+                        </div>
+                        
+                        <li>
+                            <a class="nav-link page-scroll" href="/discord">Join the Discord</a>
+                        </li>
+                        &nbsp;
+                        &nbsp;
+                        <li>
+                            <a class="dashb-nav-link" href="https://dash.frdomains.site">Dashboard</a>
+                        </li>
+                        &nbsp;
+                        &nbsp;
+                        <li>
+                            <a class="get-nav-link page-scroll" href="/#get">Get</a>
+                        </li>
+
+                        <!-- iframe src="/navbar"></iframe -->
+                        <!-- btn-solid-reg -->
+
+                    </ul>
+                </div> <!-- end of navbar-collapse -->
+            </div> <!-- end of container -->
+        </nav> <!-- end of navbar -->
+        <!-- end of navigation -->
+
+        <!-- Header -->
+        <header id="header" class="header py-28 text-center md:pt-36 lg:text-left xl:pt-44 xl:pb-32">
+            <div class="container px-4 sm:px-8 lg:grid lg:grid-cols-2 lg:gap-x-8">
+                <div class="mb-16 lg:mt-32 xl:mt-40 xl:mr-12">
+                    <h1 class="h1-large mb-5">Get a free subdomain with full access</h1>
+                    <p class="" id="subdomain"></p><br><br>
+                    <a class="btn-solid-lg page-scroll" href="#get">Get</a>
+                    <a class="btn-pricing page-scroll" href="#pricing">Pricing</a>
+                </div>
+                <div class="xl:text-right">
+                    <img class="inline" src="/logo.jpg" alt="domain-logo" />
+                </div>
+            </div> <!-- end of container -->
+        </header> <!-- end of header -->
+        <!-- end of header -->
+
+    <div id="statistics">
+        <!-- Introduction -->
+        <div class="gradiented-class-1">
+            <div class="pt-4 pb-14 text-center background-transparent">
+                <div class="container px-4 sm:px-8 xl:px-4">
+                    <p class="arial-font" style="font-size: 25px;">Changelog:</p>
+                    <p>&nbsp;</p>
+                    <p class="arial-font">May 5th 2024: Website created</p>
+                    <p class="arial-font">May 26th 2024 - Website tutorials preparing / main site finished / shop in progress</p>
+                    <p class="arial-font">June 2th 2024 - Tutorials Complete</p>
+                    <p class="arial-font">June 30th 2024 - domain not renewed so the site wasnt working (at that time we were using NoIP)</p>
+                    <p class="arial-font">July 23rd 2024 - Domain is owned by us again</p>
+                    <p class="arial-font">July 27th 2024 - Discord Server created</p>
+                    <p class="arial-font">June 4th 2024 - Discord Server set up</p>
+                    <p class="arial-font">August 15th 2024 - Domain bought (frdomains.site)</p>
+                    <p class="arial-font">August 20th 2024 - Domain set up</p>
+                    <p class="arial-font">September 6th 2024 - Analytics set up</p>
+                    <p class="arial-font">September 17th 2024 - Domain added to Cloudflare</p>
+                    <p class="arial-font">September 17th 2024 - Dark mode added on basic html pages (tutorials, privacy policy)</p>
+                    <p class="arial-font">September 25th 2024 - Dark mode on main page completed by JPman</p>
+                    <p class="arial-font">September 27th 2024 - Analytics turned off</p>
+                </div> <!-- end of container -->
+            </div>
+        <!-- end of introduction -->
+    
+
+
+
+ 
+
+        <!-- Statistics -->
+            <div id="stats" class="counter">
+                <div class="container px-4 sm:px-8">
+                    
+                    <!-- Counter -->
+                    <div id="counter" class="bg-blue-950 rounded-lg shadow-2xl">
+                        <br>
+                        <br>
+                        <div class="cell">
+                            <div class="counter-value number-count" data-count="1">1</div>
+                            <p class="counter-info">Users</p>
+                        </div>
+                        <div class="cell">
+                            <div class="counter-value number-count" data-count="1">1</div>
+                            <p class="counter-info">Subomains Ordered</p>
+                        </div>
+                        <br>
+                    </div>
+                    <!-- end of counter -->
+
+                </div> <!-- end of container -->
+            </div> <!-- end of counter -->
+        </div>
+        <!-- end of statistics -->
+    </div>
+
+
+
+
+        <!-- Pricing -->
+        <div id="pricing" class="cards-2">
+            <div class="absolute bottom-0 h-40 w-full bg-transparent"></div>
+            <div class="container px-4 pb-px sm:px-8">
+                <h2 class="mb-2.5 text-white lg:max-w-xl lg:mx-auto text-4xl font-bold">Pricing is not just zeros sadly anymore</h2>
+                <p class="mb-16 text-white lg:max-w-3xl lg:mx-auto"> We offer free subdomains & emails </p>
+
+                <!-- Card-->
+                <div class="card drop-shadow-2xl">
+                    <div class="card-body bg-blue-950 rounded-md">
+                        <div class="card-title">Plas</div>
+                        <div class="price"><span class="currency">€</span><span class="value">0.59</span><br><span class="value" style="font-size: smaller;">($0.65)</span></div>
+                        <div class="frequency">every semester</div>
+                        <div class="freqsmalltext">(half a year)</div>
+                        <p>sometimes called as frdomains plus or premium</p>
+                        <ul class="list mb-7 space-y-2 text-left">
+                            <li class="flex">
+                                <i class="fas fa-chevron-right"></i>
+                                <div>Multiple email addresses</div>
+                            </li>
+                            <li class="flex">
+                                <i class="fas fa-chevron-right"></i>
+                                <div>Multiple subdomains</div>
+                            </li>
+                            <li class="flex">
+                                <i class="fas fa-chevron-right"></i>
+                                <div>+ more domains (none yet)</div>
+                            </li>
+                        </ul>
+                        <div class="button-wrapper">
+                           <stripe-buy-button
+                            buy-button-id="buy_btn_1QPQoRAYBHbxMYMaiAIMPGTE"
+                            publishable-key="pk_live_51QPN7RAYBHbxMYMaMe9J0WExjjvt5u0e9hF17RDZ4FNss0wdObqDEn2tuQvEBRIeCOKGVKgl0M6XZ2MAIP1ZIW7O007H2IRklk">
+                           </stripe-buy-button>
+                        </div>
+                    </div>
+                </div> <!-- end of card -->
+                <!-- end of card -->
+
+                <div class="card drop-shadow-2xl">
+                    <div class="card-body bg-blue-950 rounded-md">
+                        <div class="card-title">Standard</div>
+                        <div class="price"><span class="currency">anything</span><span class="value">0</span></div>
+                        <div class="frequency">lifetime</div>
+                        <p>the standard recommendation</p>
+                        <ul class="list mb-7 space-y-2 text-left">
+                            <li class="flex">
+                                <i class="fas fa-chevron-right"></i>
+                                <div>Multiple email addresses</div>
+                            </li>
+                            <li class="flex">
+                                <i class="fas fa-chevron-right"></i>
+                                <div>Multiple subdomains</div>
+                            </li>
+                        </ul>
+                        <div class="button-wrapper">
+                            <a class="btn-solid-reg page-scroll" href="#get">Get</a>
+                        </div>
+                    </div>
+                </div> <!-- end of card -->
+                <!-- end of card -->
+
+                <div class="card drop-shadow-2xl">
+                    <div class="card-body bg-blue-950 rounded-md">
+                        <div class="card-title">Game Server Hosting</div>
+                        <div class="price"><span class="currency">€</span><span class="value">13.99</span><br><span class="value" style="font-size: smaller;">($14.49)</span></div>
+                        <div class="frequency">monthly</div>
+                        <p>from kubali</p>
+                        <ul class="list mb-7 space-y-2 text-left">
+                            <li class="flex">
+                                <i class="fas fa-chevron-right"></i>
+                                <div>Game server hosting (Minecraft -to be added rust)
+                                 12GB RAM, 5 Threads CPU</div>
+                            </li>
+                        </ul>
+                        <div class="button-wrapper">
+                            <a class="btn-solid-reg page-scroll unavailable" href="#pricing">not available</a>
+                        </div>
+                    </div>
+                </div> <!-- end of card -->
+                <!-- end of card -->
+
+
+
+            </div> <!-- end of container -->
+        </div> <!-- end of cards-2 -->
+        <!-- end of pricing -->
+
+
+        <!-- Conclusion -->
+        <div id="get" class="basic-5">
+            <div class="container px-4 sm:px-8 lg:grid lg:grid-cols-2">
+                <div class="mb-16 lg:mb-0">
+                    <i class="fa-brands fa-discord text-center flex justify-center" style="color: #9ec2ff;font-size: 19em;"></i>
+                </div>
+                <div class="lg:mt-24 xl:mt-44 xl:ml-12">
+                    <p class="mb-9 text-white-800 text-3xl leading-10">To get, join our <u><a href="/discord">Discord</a></u>, or email us at <u><a href="mailto:get@frdomains.site">get@frdomains.site</a></u></p>
+                </div>
+            </div> <!-- end of container -->
+        </div> <!-- end of basic-5 -->
+        <!-- end of conclusion -->
+
+
+        <!-- Footer -->
+        <div id="contact" class="footer">
+            <div class="container px-4 sm:px-8">
+                <h4 class="mb-8 lg:max-w-3xl lg:mx-auto text-2xl font-bold">FrDomains is a group of 3 friends and you can contact us at <a class="text-indigo-600 hover:text-gray-500" href="mailto:contact@frdomains.site">contact@frdomains.site</a></h4>
+                <div class="social-container">
+                    <span class="fa-stack">
+                        <a href="/discord">
+                            <i class="fas fa-circle fa-stack-2x"></i>
+                            <i class="fab fa-discord fa-stack-1x"></i>
+                        </a>
+                    </span>
+                    <span class="fa-stack">
+                        <a href="https://www.tiktok.com/@frdomains">
+                            <i class="fas fa-circle fa-stack-2x"></i>
+                            <i class="fab fa-tiktok fa-stack-1x"></i>
+                        </a>
+                    </span>
+                    <span class="fa-stack">
+                        <a href="https://www.reddit.com/r/frdomains/">
+                            <i class="fas fa-circle fa-stack-2x"></i>
+                            <i class="fab fa-reddit fa-stack-1x"></i>
+                        </a>
+                    </span>
+                    <span class="fa-stack">
+                        <a href="https://www.youtube.com/@frdomains">
+                            <i class="fas fa-circle fa-stack-2x"></i>
+                            <i class="fab fa-youtube fa-stack-1x"></i>
+                        </a>
+                    </span>
+                    <span class="fa-stack">
+                        <a href="https://x.com/frdomains_">
+                            <i class="fas fa-circle fa-stack-2x"></i>
+                            <i class="fab fa-twitter fa-stack-1x"></i>
+                        </a>
+                    </span>
+                </div> <!-- end of social-container -->
+            </div> <!-- end of container -->
+        </div> <!-- end of footer -->
+        <!-- end of footer -->
+
+
+        <!-- Copyright -->
+        <div class="copyright">
+            <div class="container px-4 sm:px-8 lg:grid lg:grid-cols-3">
+                <ul class="mb-4 list-unstyled p-small">
+                    <li class="mb-2"><a href="/tutorials">Tutorials</a></li>
+                    <li class="mb-2"><a href="/privacy">Privacy Policy</a></li>
+                    <li class="mb-2"><a href="/team">Team</a></li>
+                </ul>
+
+                <p class="pb-2 p-small statement">Made by <a href="https://mrtomicz.ddns.net/">MrTomiCZ</a>, kubali and <!--a href="https://jpman.eu/"-->JPmanOF<!--/a--></p>
+            </div> 
+
+        <!-- end of container -->
+        </div> <!-- end of copyright -->
+        <!-- end of copyright -->
+
+
+        <!-- Scripts -->
+        <script src="js/jquery.min.js"></script> <!-- jQuery for JavaScript plugins -->
+        <script src="js/jquery.easing.min.js"></script> <!-- jQuery Easing for smooth scrolling between anchors -->
+        <script src="js/swiper.min.js"></script> <!-- Swiper for image and text sliders -->
+        <script src="js/jquery.magnific-popup.js"></script> <!-- Magnific Popup for lightboxes -->
+        <script src="js/scripts.js"></script> <!-- Custom scripts -->
+        <script async src="https://js.stripe.com/v3/buy-button.js"></script> <!-- stripe -->
+        <script>
+            new TypeIt("#subdomain", { 
+    lifeLike: false, 
+    speed: 0 
+})
+    .type("y")
+    .pause(100)
+    .type("o")
+    .pause(100)
+    .type("u")
+    .pause(100)
+    .type(".")
+	.pause(100)
+//	.type("f")
+//	.pause(100)
+//	.type(".")
+//	.pause(100)
+	.type("f")
+	.pause(100)
+	.type("r")
+	.pause(100)
+	.type("d")
+	.pause(100)
+	.type("o")
+	.pause(100)
+	.type("m")
+	.pause(100)
+	.type("a")
+	.pause(100)
+	.type("i")
+	.pause(100)
+	.type("n")
+	.pause(100)
+	.type("s")
+	.pause(100)
+	.type(".")
+	.pause(100)
+	.type("s")
+	.pause(100)
+	.type("i")
+	.pause(100)
+	.type("t")
+	.pause(100)
+	.type("e")
+	.pause(5000)
+	.delete(1)
+	.pause(30)
+	.delete(1)
+	.pause(30)
+	.delete(1)
+	.pause(30)
+	.delete(1)
+	.pause(30)
+	.delete(1)
+	.pause(30)
+	.delete(1)
+	.pause(30)
+	.delete(1)
+	.pause(30)
+	.delete(1)
+	.pause(30)
+	.delete(1)
+	.pause(30)
+	.delete(1)
+	.pause(30)
+	.delete(1)
+	.pause(30)
+	.delete(1)
+	.pause(30)
+	.delete(1)
+	.pause(30)
+	.delete(1)
+	.pause(500)
+	.type("d")
+	.pause(100)
+	.type("m")
+	.pause(100)
+	.type("e")
+	.pause(100)
+	.type("n")
+	.pause(100)
+	.type("a")
+	.pause(100)
+	.type(".")
+	.pause(100)
+	.type("x")
+	.pause(100)
+	.type("y")
+	.pause(100)
+	.type("z")
+    .pause(5000)
+    .move(-13, { delay: 100 })
+    .type("y")
+    .pause(100)
+    .type("o")
+    .pause(100)
+    .type("u")
+    .pause(100)
+    .type("@")
+    .pause(100)
+    .move(+13, { delay: 100 })
+	// .delete(1)
+    // .pause(10)
+	// .delete(1)
+    // .pause(10)
+	// .delete(1)
+    // .pause(10)
+	// .delete(1)
+    // .pause(10)
+	// .delete(1)
+    // .pause(10)
+	// .delete(1)
+    // .pause(10)
+	// .delete(1)
+    // .pause(10)
+	// .delete(1)
+    // .pause(10)
+	// .delete(1)
+    // .pause(10)
+    // .delete(1)
+    .type("____idk how to loop")
+	.go();
+        </script>
+    </body>
+</html>
