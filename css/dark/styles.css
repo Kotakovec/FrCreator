@@ -1349,3 +1349,12 @@ a:hover.back-to-top {
     font-size: 0.675rem;
     text-align: center;
 }
+.container2collumnsa {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.column2collumnsa {
+    padding: 10px;
+}
