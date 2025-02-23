@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<head>
+    <link href="/css/dark/styles.css" rel="stylesheet" />
+    <meta name="color-scheme" content="light dark">
+    <title>Site Unavailable - FrCreator</title>
+    <style>
+      .downbckgrad {
+    /* background: rgb(2,0,36); */
+    background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(0,44,106,1) 100%);
+}
+
+/*        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #222;
+            flex-direction: column;
+        } */
+
+        /* Monitor Frame */
+        .monitor {
+            width: 300px;
+            height: 200px;
+            background-color: #000000;
+            border: 10px solid #444;
+            border-radius: 10px;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        /* Screen */
+        .screen {
+            width: 100%;
+            height: 100%;
+            background-color: #000000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 20px;
+            font-family: Arial, sans-serif;
+            color: black;
+            animation: turnOff 0.5s forwards 1.5s;
+        }
+
+        /* Stand */
+        .stand {
+            width: 100px;
+            height: 10px;
+            background-color: #444;
+            margin-top: -5px;
+            border-radius: 5px;
+        }
+
+        .base {
+            width: 150px;
+            height: 20px;
+            background-color: #555;
+            margin-top: 5px;
+            border-radius: 10px;
+        }
+
+        @keyframes turnOff {
+            0% {
+                opacity: 1;
+            }
+            100% {
+                opacity: 0;
+                background-color: black;
+            }
+        }
+    </style>
+</head>
+<body style="background: rgb(0,44,106);" id="bodej">
+   <center class="downbckgrad">
+    <div>&nbsp;</div>
+    <p style="font-size: 24px;">Uh oh! Our website is temporarily unavailable. Please try again in a few minutes.</p>
+    <div class="monitor">
+        <div class="screen">
+            <img src="/full_tp.png" height="256" width="256" />
+        </div>
+    </div>
+    <div class="stand"></div>
+    <div class="base"></div>
+    <br>
+  </center>
+</body>
