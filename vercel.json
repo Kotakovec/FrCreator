@@ -2,6 +2,7 @@
     "routes": [
       { "handle": "filesystem" },
       { "src": "/team", "status": 200, "dest": "/pages/team.html" },
+      { "src": "/xASvBn", "status": 200, "dest": "/images/xASvBn.png" },
       { "src": "/(.*)", "status": 404, "dest": "/pages/404.html" }
     ]
   }
