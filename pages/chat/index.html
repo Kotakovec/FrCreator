@@ -1,3 +1,4 @@
+<!-- chat.html -->
 <!DOCTYPE html>
 <html lang="cs">
 <head>
@@ -9,7 +10,7 @@
 <body>
     <div class="chat-container">
         <div class="chat-box" id="chat-box">
-            <!-- Zde se zobrazí zprávy -->
+            <!-- Zprávy se budou zde zobrazovat -->
         </div>
         <div class="chat-input">
             <input type="text" id="message" placeholder="Napiš zprávu...">
@@ -17,6 +18,7 @@
         </div>
     </div>
 
+    <script src="/socket.io/socket.io.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
