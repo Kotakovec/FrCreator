@@ -1,3 +1,4 @@
+/* styles.css */
 body {
     font-family: Arial, sans-serif;
     display: flex;
@@ -8,7 +9,7 @@ body {
 }
 
 .chat-container {
-    width: 300px;
+    width: 400px;
     background: white;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
