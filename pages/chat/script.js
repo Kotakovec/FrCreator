@@ -1,18 +1,46 @@
-function sendMessage() {
-    let messageInput = document.getElementById("message");
-    let chatBox = document.getElementById("chat-box");
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+}
 
-    if (messageInput.value.trim() !== "") {
-        let newMessage = document.createElement("div");
-        newMessage.textContent = messageInput.value;
-        newMessage.style.padding = "5px";
-        newMessage.style.margin = "5px 0";
-        newMessage.style.background = "#d1e7ff";
-        newMessage.style.borderRadius = "5px";
-        
-        chatBox.appendChild(newMessage);
-        chatBox.scrollTop = chatBox.scrollHeight; // Auto-scroll dolů
+.chat-container {
+    width: 400px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
 
-        messageInput.value = ""; // Vymazání inputu
-    }
+.chat-box {
+    height: 400px;
+    overflow-y: auto;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.chat-input {
+    display: flex;
+    padding: 10px;
+}
+
+.chat-input input {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.chat-input button {
+    padding: 8px;
+    border: none;
+    background: #007bff;
+    color: white;
+    cursor: pointer;
+    margin-left: 5px;
+    border-radius: 4px;
 }
