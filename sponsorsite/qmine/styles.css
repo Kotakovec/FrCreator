@@ -83,7 +83,7 @@ body {
     transition: transform 0.3s ease;
 }
 .btn-rotate:active {
-    transform: rotate(20deg);
+    transform: rotate(30deg);
 }
 
 /* 6. Neon Glow */
