@@ -11,14 +11,11 @@
     <button class="btn btn-hover">HOVER</button>
     <button class="btn btn-ripple">RIPPLE</button>
     <button class="btn btn-gradient">GRADIENT</button>
-    <button class="btn btn-3d">3D</button>
     <button class="btn btn-rotate" onclick="copyToClipboard()">ROTATE</button>
-    <button class="btn btn-neon">NEON</button>
-    <button class="btn btn-pulse">PULSE</button>
 
     <script>
         function copyToClipboard() {
-            const textToCopy = "382828";
+            const textToCopy = "[ip serveru]";
             navigator.clipboard.writeText(textToCopy).then(() => {
                 let btn = document.querySelector(".btn-rotate");
                 let originalText = btn.innerText;
