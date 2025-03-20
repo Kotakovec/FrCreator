@@ -25,10 +25,12 @@ body {
 }
 
 /* 5. Rotate on Click */
-.btn-rotate {
-    background: #f800080;
+.btn-gradient {
+    background: linear-gradient(45deg, #ff9f43, #ff6b6b);
     color: white;
-    transition: transform 0.3s ease;
+}
+.btn-gradient:hover {
+    background: linear-gradient(45deg, #ff6b6b, #ff9f43);
 }
 .btn-rotate:active {
     transform: rotate(30deg);
