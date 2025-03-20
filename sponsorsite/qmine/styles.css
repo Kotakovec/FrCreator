@@ -32,15 +32,7 @@ body {
 .btn-gradient:hover {
     background: linear-gradient(45deg, #ff6b6b, #ff9f43);
 }
+
 .btn-rotate:active {
     transform: rotate(30deg);
-}
-
-/* 4. Gradient */
-.btn-gradient {
-    background: linear-gradient(45deg, #ff9f43, #ff6b6b);
-    color: white;
-}
-.btn-gradient:hover {
-    background: linear-gradient(45deg, #ff6b6b, #ff9f43);
 }
