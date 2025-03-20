@@ -1,0 +1,13 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 50px;
+    background: #121212;
+    color: white;
+}
+
+.btn {
+    display: inline
