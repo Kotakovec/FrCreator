@@ -4,120 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Animovaná tlačítka</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 20px;
-            padding: 50px;
-            background: #121212;
-            color: white;
-        }
-
-        .btn {
-            display: inline-block;
-            padding: 15px 30px;
-            font-size: 18px;
-            font-weight: bold;
-            text-transform: uppercase;
-            text-align: center;
-            cursor: pointer;
-            border: none;
-            outline: none;
-            position: relative;
-            overflow: hidden;
-            transition: all 0.3s ease;
-        }
-
-        /* 1. Basic Hover */
-        .btn-hover {
-            background: #ff4757;
-            color: white;
-        }
-        .btn-hover:hover {
-            background: #e84118;
-        }
-
-        /* 2. Ripple Effect */
-        .btn-ripple {
-            background: #1e90ff;
-            color: white;
-            position: relative;
-        }
-        .btn-ripple:active::after {
-            content: "";
-            position: absolute;
-            width: 100px;
-            height: 100px;
-            background: rgba(255, 255, 255, 0.5);
-            border-radius: 50%;
-            transform: scale(0);
-            animation: ripple 0.6s linear;
-        }
-        @keyframes ripple {
-            to {
-                transform: scale(4);
-                opacity: 0;
-            }
-        }
-
-        /* 3. Gradient Button */
-        .btn-gradient {
-            background: linear-gradient(45deg, #ff9f1a, #ff4757);
-            color: white;
-            transition: 0.4s;
-        }
-        .btn-gradient:hover {
-            filter: brightness(1.2);
-        }
-
-        /* 4. 3D Button */
-        .btn-3d {
-            background: #2ed573;
-            color: white;
-            box-shadow: 0 5px 0 #1e824c;
-        }
-        .btn-3d:active {
-            transform: translateY(5px);
-            box-shadow: 0 2px 0 #1e824c;
-        }
-
-        /* 5. Rotating Button */
-        .btn-rotate {
-            background: #eccc68;
-            color: black;
-            transition: transform 0.3s ease;
-        }
-        .btn-rotate:hover {
-            transform: rotate(10deg);
-        }
-
-        /* 6. Neon Button */
-        .btn-neon {
-            background: black;
-            color: #0ff;
-            border: 2px solid #0ff;
-            box-shadow: 0 0 10px #0ff;
-        }
-        .btn-neon:hover {
-            box-shadow: 0 0 20px #0ff;
-        }
-
-        /* 7. Pulse Button */
-        .btn-pulse {
-            background: #ff6b81;
-            color: white;
-            animation: pulse 1.5s infinite;
-        }
-        @keyframes pulse {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.1); }
-            100% { transform: scale(1); }
-        }
-
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
@@ -125,9 +12,23 @@
     <button class="btn btn-ripple">Ripple</button>
     <button class="btn btn-gradient">Gradient</button>
     <button class="btn btn-3d">3D</button>
-    <button class="btn btn-rotate">Rotate</button>
+    <button class="btn btn-rotate" onclick="copyToClipboard()">Rotate</button>
     <button class="btn btn-neon">Neon</button>
     <button class="btn btn-pulse">Pulse</button>
+
+    <script>
+        function copyToClipboard() {
+            const textToCopy = "382828";
+            navigator.clipboard.writeText(textToCopy).then(() => {
+                let btn = document.querySelector(".btn-rotate");
+                let originalText = btn.innerText;
+                btn.innerText = "Zkopírováno";
+                setTimeout(() => {
+                    btn.innerText = originalText;
+                }, 2000);
+            }).catch(err => console.error("Chyba při kopírování: ", err));
+        }
+    </script>
 
 </body>
 </html>
