@@ -31,5 +31,5 @@ body {
     transition: transform 0.3s ease;
 }
 .btn-rotate:active {
-    transform: rotate(360deg);
+    transform: rotate(30deg);
 }
