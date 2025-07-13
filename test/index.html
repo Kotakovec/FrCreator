@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>FrCreator</title>
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: #f2d8f9;
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    h1 {
+      color: #c25ef7;
+      font-size: 3em;
+      margin-top: 40px;
+    }
+
+    .form-container {
+      margin-top: 50px;
+    }
+
+    input, textarea {
+      display: block;
+      width: 300px;
+      padding: 15px;
+      margin: 20px auto;
+      border-radius: 30px;
+      border: none;
+      font-size: 16px;
+      background-color: #dd8bf9;
+      color: white;
+      outline: none;
+    }
+
+    input::placeholder, textarea::placeholder {
+      color: white;
+      font-weight: bold;
+    }
+
+    button {
+      display: block;
+      margin: 10px auto;
+      padding: 10px 30px;
+      font-size: 16px;
+      border: none;
+      border-radius: 30px;
+      background-color: #e0aaff;
+      color: white;
+      cursor: pointer;
+    }
+
+    .waves {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      height: 300px;
+      background: linear-gradient(to top, #6f2dbd, #a663cc, #c996f7, transparent);
+      z-index: -1;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>FrCreator</h1>
+
+  <div class="form-container">
+    <form id="contact-form">
+      <input type="text" id="name" name="user_name" placeholder="Your name" required />
+      <textarea id="message" name="message" rows="5" placeholder="What do you need?" required></textarea>
+      <button type="submit">Send</button>
+    </form>
+  </div>
+
+  <div class="waves"></div>
+
+  <script>
+    (function() {
+      emailjs.init("YOUR_PUBLIC_KEY"); // ← sem dej svůj public key
+    })();
+
+    document.getElementById("contact-form").addEventListener("submit", function(event) {
+      event.preventDefault();
+
+      const templateParams = {
+        user_name: document.getElementById("name").value,
+        message: document.getElementById("message").value
+      };
+
+      emailjs.send("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", templateParams)
+        .then(function(response) {
+          alert("Email sent successfully!");
+        }, function(error) {
+          alert("Failed to send email: " + JSON.stringify(error));
+        });
+    });
+  </script>
+
+</body>
+</html>
