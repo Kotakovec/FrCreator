@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+  <body>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        padding: 30px;
+        background-color: #f0f0f0;
+      }
+      .container {
+        background: white;
+        padding: 20px;
+        border-radius: 10px;
+        width: 300px;
+        margin: auto;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        text-align: center;
+      }
+      input {
+        padding: 10px;
+        margin-top: 10px;
+        width: 100%;
+        box-sizing: border-box;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        font-size: 16px;
+      }
+      .save-button {
+        margin-top: 15px;
+        padding: 12px 24px;
+        font-size: 18px;
+        font-weight: bold;
+        color: white;
+        background: linear-gradient(50deg, #d0e8ff, #2f80ed);
+        border: none;
+        border-radius: 50px;
+        cursor: pointer;
+        transition: 0.3s ease;
+      }
+        .save-button:hover {
+        opacity: 0.9;
+        transform: scale(1.03);
+      }
+      h2 {
+        margin-top: 0;
+      }
+    </style>
+    <div class="container">
+      <h2>Uživatelské jméno:</h2>
+      <p id="username">Nenačteno</p>
+      <input type="text" id="newUsername" placeholder="Zadej nové jméno">
+      <button class="save-button" onclick="saveUsername()">ULOŽIT</button>
+    </div>
+  </body>
+</html>
