@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FrCreator</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  color: white;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  background: #041620;
+}
+
+/* NAVBAR */
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(10,10,10,0.85);
+  backdrop-filter: blur(10px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 50px;
+  z-index: 10;
+  border-bottom: 1px solid #222;
+}
+
+nav h1 {
+  font-size: 24px;
+  letter-spacing: 1px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 30px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #ccc;
+  font-size: 16px;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: white;
+}
+
+/* SECTIONS */
+section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 60px 20px;
+  background: transparent;
+}
+
+/* HERO */
+#home {
+  height: 100vh;
+  background: url('/images/backround.jpg') center/cover no-repeat;
+}
+
+#home h1 {
+  font-size: 72px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+#home p {
+  margin-top: 20px;
+  color: #bbb;
+  font-size: 20px;
+}
+
+/* ORDERS */
+#stats {
+  background: #041620;
+}
+
+#stats h2 {
+  font-size: 32px;
+  margin-bottom: 40px;
+}
+
+.stats-grid {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.stat-box {
+  background: rgba(26,26,26,0.7);
+  padding: 25px 50px;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-width: 250px;
+  min-height: 150px;
+}
+
+.stat-box h3 {
+  font-size: 18px;
+  color: #bbb;
+}
+
+.stat-box p {
+  font-size: 36px;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+/* PRODUCTS */
+#products {
+  padding: 80px 20px;
+  background: #041620;
+}
+
+#products h2 {
+  font-size: 32px;
+  margin-bottom: 50px;
+}
+
+.product-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  max-width: 1300px;
+  width: 100%;
+  justify-items: center;
+}
+
+.product {
+  background: rgba(26,26,26,0.7);
+  border-radius: 16px;
+  padding: 20px;
+  text-align: center;
+  width: 100%;
+  max-width: 220px;
+  transition: transform 0.2s ease;
+}
+
+.product:hover {
+  transform: translateY(-5px);
+}
+
+.product img {
+  width: 100%;
+  border-radius: 12px;
+  margin-bottom: 15px;
+}
+
+.product h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.product p {
+  font-size: 14px;
+  color: #bbb;
+  margin-bottom: 15px;
+}
+
+.product a {
+  display: inline-block;
+  background: #5865f2;
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.product a:hover {
+  background: #4752c4;
+}
+
+/* DISCORD */
+#discord {
+  padding: 120px 20px;
+  min-height: 400px;
+  background: #041620;
+}
+
+#discord h2 {
+  font-size: 36px;
+  margin-bottom: 30px;
+}
+
+#discord p {
+  font-size: 18px;
+  color: #bbb;
+  margin-bottom: 40px;
+  max-width: 600px;
+}
+
+#discord a {
+  display: inline-block;
+  background: #5865f2;
+  color: white;
+  text-decoration: none;
+  padding: 15px 40px;
+  border-radius: 12px;
+  font-weight: 600;
+}
+
+#discord a:hover {
+  background: #4752c4;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #041620;
+  font-size: 14px;
+}
+
+/* FULLPAGE SCROLL - PC */
+@media(min-width: 900px) {
+  section {
+    height: 100vh;
+  }
+}
+
+/* MOBILE */
+@media(max-width: 899px) {
+  #stats, #products, #discord {
+    height: auto;
+  }
+}
+
+/* SMALL MOBILE */
+@media(max-width: 600px) {
+  nav {
+    padding: 10px 20px;
+  }
+  .nav-links {
+    gap: 15px;
+  }
+  #home h1 {
+    font-size: 48px;
+  }
+  .stats-grid {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+</style>
+</head>
+<body>
+<nav>
+  <h1>FrCreator</h1>
+  <div class="nav-links">
+    <a href="#stats">Orders</a>
+    <a href="#products">Products</a>
+    <a href="#discord">Discord</a>
+  </div>
+</nav>
+
+<section id="home">
+  <h1>FrCreator</h1>
+  <p>We create quality. Fast. Creative.</p>
+</section>
+
+<section id="stats">
+  <h2>Order Overview</h2>
+  <div class="stats-grid">
+    <div class="stat-box"><h3>Created</h3><p>42</p></div>
+    <div class="stat-box"><h3>Completed</h3><p>31</p></div>
+    <div class="stat-box"><h3>In Progress</h3><p>11</p></div>
+  </div>
+</section>
+
+<section id="products">
+  <h2>Our Products</h2>
+  <div class="product-row">
+    <div class="product">
+      <img src="https://placehold.co/300x200?text=Website">
+      <h3>Website</h3>
+      <p>Custom website with our domain</p>
+      <a href="/order/website">Order</a>
+    </div>
+
+    <div class="product">
+      <img src="https://placehold.co/300x200?text=Domain">
+      <h3>Domain</h3>
+      <p>Our domain for your project</p>
+      <a href="/order/domain">Order</a>
+    </div>
+
+    <div class="product">
+      <img src="https://placehold.co/300x200?text=Custom+Domain">
+      <h3>Custom Domain</h3>
+      <p>Your own domain from our domain list</p>
+      <a href="/order/custom-domain">Order</a>
+    </div>
+
+    <div class="product">
+      <img src="https://placehold.co/300x200?text=Custom+Domain+%2B+Website">
+      <h3>Custom Domain + Website</h3>
+      <p>Your own domain and a custom-made website</p>
+      <a href="/order/custom-domain-website">Order</a>
+    </div>
+
+    <div class="product">
+      <img src="https://placehold.co/300x200?text=Discord+Bot">
+      <h3>Discord Bot</h3>
+      <p>Discord bot made to your specifications</p>
+      <a href="/order/bot">Order</a>
+    </div>
+  </div>
+</section>
+
+<section id="discord">
+  <h2>Join our Discord</h2>
+  <p>Get updates, talk with the FrCreator team, and be part of our creative community.</p>
+  <a href="https://discord.gg/frcreator" target="_blank">💬 Join Discord</a>
+</section>
+
+<footer>
+  <p>© 2025 FrCreator | Made by Koťák</p>
+</footer>
+
+<script>
+// Smooth fullpage scroll on PC
+if(window.innerWidth >= 900){
+  const sections = document.querySelectorAll("section");
+  let currentSection = 0;
+  let isScrolling = false;
+
+  window.addEventListener("wheel", (e) => {
+    if(isScrolling) return;
+    isScrolling = true;
+
+    if(e.deltaY > 0){
+      currentSection = Math.min(sections.length - 1, currentSection + 1);
+    } else {
+      currentSection = Math.max(0, currentSection - 1);
+    }
+
+    sections[currentSection].scrollIntoView({behavior: "smooth"});
+
+    setTimeout(() => { isScrolling = false; }, 800);
+  });
+}
+</script>
+</body>
+</html>
